@@ -1,15 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
-</head>
-<body>
-   <h1>Inscreva-se no cadastro do sistema</h1> 
-   <br>
-   <br>
-   <h1> Teste </h1>
-</body>
-</html>
+{% extends 'nav.html' %}
+
+{% block  title %}
+Loja_django
+{% endblock title %}
+
+{% block style %}
+    <style>
+        .btn{
+            font-family: "Raleway", sans-sherif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: 
+
+        }
+    </style>
+{% endblock style %}
+
+{% block body %} 
+<section id="contact" class="contact">
+    <div class="container">
+
+<div class="section-title" data-aos="fade-up">
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+<h1 data-aos="fade-up">Cadastrar</h1>
+<div class="container" data-aos="fade-up" data-aos-delay="400">
+</div>
+    <form action="/signup" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="ZIaK6oNACns589uLWdVx56jl97RblkqrMRIwlASaR6LJ4wPwjZolMZLjSE33PQj">
+      <br>
+
+      <label for="email">Email</label>
+      <div calss="form-group">
+      <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <label for="pass1">Senha</label>
+      <div calss="form-group">
+      <input type="password" class="form-control" id="pass1" name="pass1" required>
+      </div>
+      <label for="pass2">Confirmar Senha</label>
+      <div calss="form-group">
+      <input type="password" class="form-control" id="pass2" name="pass2" required>
+      </div>
+      <br>
+      <button type="submit" class="btn">Cadastrar</button>
+
+      <br>
+      Já é cadastrado ? <a href="/login">Login</a>
+      <br>
+      <a href="/">Home</a>
+      </form>
+    </div>
+    </div>
+    <div class="col-md-6"</div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock body %}
