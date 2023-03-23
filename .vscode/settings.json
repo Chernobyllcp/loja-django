@@ -1,0 +1,5 @@
+{
+    "html.autoClosingTags": true,
+    "html.format.indentHandlebars": false,
+    "html.autoCreateQuotes": false
+}
