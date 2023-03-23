@@ -1,7 +1,7 @@
 {% extends 'nav.html' %}
 
 {% block  title %}
-Loja_django
+Loja_django Login
 {% endblock title %}
 
 {% block style %}
@@ -18,6 +18,8 @@ Loja_django
             color: #ffffff; 
             background-color: #2ba215;
             border: 2px solid #000000
+            
+
         }
     </style>
 {% endblock style %}
@@ -40,16 +42,18 @@ Loja_django
         <br>
         <br>
 
-<h1 data-aos="fade-up">Cadastrar</h1>
+<h1 data-aos="fade-up">Login</h1>
 <div class="container" data-aos="fade-up" data-aos-delay="400">
 </div>
+
 {% for message in messages %}
 <div class="alert alert-{{message.tags}}" role="alert">
     <strong>{{message}}</strong>
     <button type="button" class="btn-close" data-bs-dimiss="alert" aria-label="Close"></button>
 </div>
 {% endfor %}
-    <form action="/lojauth/cadastrar" method="post">{% csrf_token %}
+
+    <form action="/signup" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="ZIaK6oNACns589uLWdVx56jl97RblkqrMRIwlASaR6LJ4wPwjZolMZLjSE33PQj">
       <br>
 
       <label for="email">Email</label>
@@ -60,15 +64,14 @@ Loja_django
       <div calss="form-group">
       <input type="password" class="form-control" id="pass1" name="pass1" required>
       </div>
-      <label for="pass2">Confirmar Senha</label>
-      <div calss="form-group">
-      <input type="password" class="form-control" id="pass2" name="pass2" required>
-      </div>
+      
       <br>
-      <button type="submit" class="btn">Cadastrar</button>
+      <button type="submit" class="btn">Login</button>
 
+      <hr>
+      Não é cadastrado ? <a href="/lojauth/cadastrar/">Cadastrar</a>
       <br>
-      Já é cadastrado ? <a href="/lojauth/login/">Login</a>
+      <span>Esqueceu sua Senha? <a href="/">Recuperar senha</a></span>
       <br>
       <a href="/">Home</a>
       </form>
