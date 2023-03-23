@@ -8,7 +8,7 @@ from django.contrib import messages
 
 
 def cadastrar(request):
-    if request.method=="POST":
+    if request.method == "POST":
         email = request.POST['email']
         password = request.POST['pass1']
         confirme_password = request.POST['pass2']
