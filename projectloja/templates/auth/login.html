@@ -51,10 +51,10 @@ Loja_django Login
 </div>
 {% endfor %}
 
-    <form action="/signup" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="ZIaK6oNACns589uLWdVx56jl97RblkqrMRIwlASaR6LJ4wPwjZolMZLjSE33PQj">
+    <form action="/lojauth/login/" method="post">{% csrf_token %}
       <br>
 
-      <label for="email">Email</label>
+      <label for="email">E-mail</label>
       <div calss="form-group">
       <input type="email" class="form-control" id="email" name="email" required>
       </div>
